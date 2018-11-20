@@ -1,21 +1,15 @@
 package max_sum
 
 import org.junit.Assert
-import org.junit.Before
 import org.junit.Test
 
 class SubsetSumTest {
 
-    lateinit var subsetSumTest: SubsetSum
-
-    @Before
-    fun setUp() {
-        val testSet = arrayListOf(2,-4,6,8,-10,100,-6,5)
-        subsetSumTest = SubsetSum(testSet)
-    }
-
     @Test
     fun shouldReturn_indexesAndResultOfMaxSum() {
+        val testSet = arrayListOf(2,-4,6,8,-10,100,-6,5)
+        val subsetSumTest = SubsetSum(testSet)
+
         val startIndex = 2
         val endIndex = 5
         val maxSum = 104
@@ -28,6 +22,9 @@ class SubsetSumTest {
 
     @Test
     fun shouldReturn_subsetMaxSum() {
+        val testSet = arrayListOf(2,-4,6,8,-10,100,-6,5)
+        val subsetSumTest = SubsetSum(testSet)
+
         val expected = arrayListOf("2", "-4", "**6", "8", "-10", "100**", "-6", "5")
 
         val result = subsetSumTest.subsetMaxSum()
@@ -35,4 +32,15 @@ class SubsetSumTest {
         Assert.assertEquals(expected, result)
     }
 
+    @Test
+    fun shouldReturn_subsetNullOrEmpty() {
+        val testSet = arrayListOf(0)
+        val subsetSumTest = SubsetSum(testSet)
+
+        val expected = arrayListOf("Conjunto NULO ou VAZIO")
+
+        val result = subsetSumTest.subsetMaxSum()
+
+        Assert.assertEquals(expected, result)
+    }
 }

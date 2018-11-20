@@ -3,6 +3,8 @@ package max_sum
 class SubsetSum(val set: ArrayList<Int>) {
 
     fun maxSum(): Array<Int> {
+        if (set.isNullOrEmpty()) return arrayOf(0,0,0)
+
         var tempStart = 0
         var startIndex = 0
         var endIndex = 0
@@ -32,7 +34,7 @@ class SubsetSum(val set: ArrayList<Int>) {
         val resultMaxSum = maxSum()
 
         if (resultMaxSum[2] <= 0) {
-            subset[0] = "0"
+            subset.add("Conjunto NULO ou VAZIO")
         }else {
            for (i in 0 until set.size) {
                when(i){
