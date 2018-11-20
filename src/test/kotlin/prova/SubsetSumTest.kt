@@ -3,6 +3,9 @@ package prova
 import org.junit.Assert
 import org.junit.Test
 
+/**
+ * @author Felipe Wisniewski
+ **/
 class SubsetSumTest {
 
     @Test

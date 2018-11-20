@@ -2,7 +2,8 @@ package prova
 
 /**
  * Classe responsável pelo cálculo do subconjunto em que a soma dos elementos são de máxima soma.
- **/
+ * @author Felipe Wisniewski
+ */
 class SubsetSum(val set: ArrayList<Int>) {
 
     fun maxSum(): Array<Int> {

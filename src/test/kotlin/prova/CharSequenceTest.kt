@@ -4,6 +4,9 @@ import org.junit.Assert
 import org.junit.Test
 import prova.CharSequence
 
+/**
+ * @author Felipe Wisniewski
+ **/
 class CharSequenceTest {
 
     @Test

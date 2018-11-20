@@ -4,6 +4,7 @@ import java.lang.NumberFormatException
 
 /**
  * Classe que contêm os métodos de interação com usuário (UI).
+ * @author Felipe Wisniewski
  */
 class Proof {
 
