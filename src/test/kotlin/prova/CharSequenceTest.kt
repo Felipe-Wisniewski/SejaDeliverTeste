@@ -1,7 +1,8 @@
-package seq_char
+package prova
 
 import org.junit.Assert
 import org.junit.Test
+import prova.CharSequence
 
 class CharSequenceTest {
 
@@ -16,6 +17,6 @@ class CharSequenceTest {
     fun shouldReturn_null() {
         val chaSeq = CharSequence("paralelepipedo")
 
-        Assert.assertNull(chaSeq.getBiggerSequence())
+        Assert.assertEquals("Não possue sequência!", chaSeq.getBiggerSequence())
     }
 }

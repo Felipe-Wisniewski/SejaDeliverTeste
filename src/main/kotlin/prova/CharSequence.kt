@@ -1,8 +1,11 @@
-package seq_char
+package prova
 
+/**
+ * Classe responsável por retornar uma sequência de caracteres que mais aparecem em sequência em dada palavra.
+ **/
 class CharSequence(val word: String) {
 
-    fun getBiggerSequence() : String? {
+    fun getBiggerSequence() : String {
         val sequences = arrayListOf<String>()
         var auxFirst = word[0]
         var auxNext: Char
@@ -29,5 +32,5 @@ class CharSequence(val word: String) {
         return getSequence(sequences)
     }
 
-    private fun getSequence(sequences: ArrayList<String>) = sequences.maxBy { it.count() }
+    private fun getSequence(sequences: ArrayList<String>) = sequences.maxBy { it.count() } ?: "Não possue sequência!"
 }

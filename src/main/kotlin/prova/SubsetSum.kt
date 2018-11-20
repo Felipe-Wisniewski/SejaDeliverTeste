@@ -1,5 +1,8 @@
-package max_sum
+package prova
 
+/**
+ * Classe responsável pelo cálculo do subconjunto em que a soma dos elementos são de máxima soma.
+ **/
 class SubsetSum(val set: ArrayList<Int>) {
 
     fun maxSum(): Array<Int> {
@@ -36,7 +39,7 @@ class SubsetSum(val set: ArrayList<Int>) {
         if (resultMaxSum[2] <= 0) {
             subset.add("Conjunto NULO ou VAZIO")
         }else {
-           for (i in 0 until set.size) {
+           for (i in set.indices) {
                when(i){
                    resultMaxSum[0] -> subset.add(i, "**${set[i]}")
                    resultMaxSum[1] -> subset.add(i, "${set[i]}**")

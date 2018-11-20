@@ -1,4 +1,4 @@
-package max_sum
+package prova
 
 import org.junit.Assert
 import org.junit.Test
